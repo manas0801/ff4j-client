@@ -20,7 +20,7 @@ public class Ff4jConfig {
          * Maybe we don't want to do an http call each time we test a feature
          * as there is latency. Local in memory cache with TTL 10min can help.
          */
-       // FF4jCacheProxy cc = new FF4jCacheProxy(fStore, pStore, new InMemoryCacheManager(600));
+       FF4jCacheProxy cc = new FF4jCacheProxy(fStore, pStore, new InMemoryCacheManager(600));
 
         FF4j ff4j = new FF4j();
         ff4j.setFeatureStore(cc);
